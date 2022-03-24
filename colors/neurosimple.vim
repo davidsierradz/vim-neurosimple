@@ -111,7 +111,7 @@ exec "hi! StatusLineNC     guifg=" . s:gui08 . " guibg=" . s:gui07 . " gui=NONE 
 exec "hi! TabLine          guifg=" . s:gui00 . " guibg=" . s:gui07 . " gui=NONE          ctermfg=" . s:cterm00 . " ctermbg=" . s:cterm07 . " cterm=NONE"
 exec "hi! TabLineFill      guifg=" . s:gui00 . " guibg=" . s:gui07 . " gui=NONE          ctermfg=" . s:cterm00 . " ctermbg=" . s:cterm07 . " cterm=NONE"
 exec "hi! Title            guifg=" . s:gui07 . " guibg=NONE            gui=bold          ctermfg=" . s:cterm07 . " ctermbg=NONE              cterm=bold"
-exec "hi! Visual           guifg=" . s:gui00 . " guibg=" . s:gui07 . " gui=NONE          ctermfg=" . s:cterm00 . " ctermbg=" . s:cterm07 . " cterm=NONE"
+exec "hi! Visual           guifg=" . s:gui07 . " guibg=" . s:gui00 . " gui=inverse       ctermfg=" . s:cterm07 . " ctermbg=" . s:cterm00 . " cterm=inverse"
 exec "hi! WarningMsg       guifg=" . s:gui07 . " guibg=NONE            gui=bold          ctermfg=" . s:cterm07 . " ctermbg=NONE              cterm=bold"
 exec "hi! WildMenu         guifg=" . s:gui07 . " guibg=NONE            gui=bold          ctermfg=" . s:cterm07 . " ctermbg=NONE              cterm=bold"
 
