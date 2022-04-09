@@ -95,7 +95,7 @@ exec "hi! Substitute       guifg=" . s:gui07 . " guibg=" . s:gui03 . " gui=bold 
 exec "hi! MatchParen       guifg=" . s:gui07 . " guibg=NONE            gui=bold          ctermfg=" . s:cterm07 . " ctermbg=NONE              cterm=bold"
 exec "hi! MoreMsg          guifg=" . s:gui07 . " guibg=NONE            gui=bold          ctermfg=" . s:cterm07 . " ctermbg=NONE              cterm=bold"
 exec "hi! NonText          guifg=" . s:gui08 . " guibg=NONE            gui=NONE          ctermfg=" . s:cterm08 . " ctermbg=NONE              cterm=NONE"
-exec "hi! Pmenu            guifg=" . s:gui00 . " guibg=" . s:gui07 . " gui=NONE          ctermfg=" . s:cterm00 . " ctermbg=" . s:cterm07 . " cterm=NONE"
+exec "hi! Pmenu            guifg=" . s:gui00 . " guibg=" . s:gui08 . " gui=NONE          ctermfg=" . s:cterm00 . " ctermbg=" . s:cterm08 . " cterm=NONE"
 exec "hi! PmenuSel         guifg=" . s:gui15 . " guibg=" . s:gui00 . " gui=bold          ctermfg=" . s:cterm15 . " ctermbg=" . s:cterm00 . " cterm=bold"
 exec "hi! PmenuSbar        guifg=NONE            guibg=" . s:gui00 . " gui=NONE          ctermfg=NONE              ctermbg=" . s:cterm00 . " cterm=NONE"
 exec "hi! PmenuThumb       guifg=NONE            guibg=" . s:gui07 . " gui=NONE          ctermfg=NONE              ctermbg=" . s:cterm07 . " cterm=NONE"
