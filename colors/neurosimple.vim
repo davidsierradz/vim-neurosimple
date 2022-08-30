@@ -129,10 +129,9 @@ exec "hi! String           guifg=" . s:gui02 . " guibg=NONE            gui=NONE 
 exec "hi! Boolean          guifg=" . s:gui03 . " guibg=NONE            gui=NONE               ctermfg=" . s:cterm03 . "  ctermbg=NONE                 cterm=NONE"
 exec "hi! Number           guifg=" . s:gui05 . " guibg=NONE            gui=NONE               ctermfg=" . s:cterm05 . "  ctermbg=NONE                 cterm=NONE"
 exec "hi! Underlined       guifg=" . s:gui07 . " guibg=NONE            gui=underline          ctermfg=" . s:cterm07 . "  ctermbg=NONE                 cterm=underline"
-exec "hi! Error            guifg=" . s:gui07 . " guibg=" . s:gui01 . " gui=NONE               ctermfg=" . s:cterm07 . "  ctermbg=" . s:cterm01 . "    cterm=NONE"
+exec "hi! Error            guifg=" . s:gui00 . " guibg=" . s:gui01 . " gui=bold               ctermfg=" . s:cterm00 . "  ctermbg=" . s:cterm01 . "    cterm=bold"
 exec "hi! Todo             guifg=" . s:gui07 . " guibg=NONE            gui=bold,underline     ctermfg=" . s:cterm07 . "  ctermbg=NONE                 cterm=bold,underline"
 
-" This groups doesn't need highlighting:
 hi! link VertSplit Normal
 hi! link LineNr Normal
 hi! link Question Normal
@@ -179,7 +178,7 @@ exec "hi! WhichKeyDesc        guifg=" . s:gui07 . " guibg=" . "NONE" . " gui=NON
 exec "hi! WhichKeyValue       guifg=" . s:gui07 . " guibg=" . "NONE" . " gui=NONE          ctermfg=" . s:cterm00 . " ctermbg=" . "NONE" . " cterm=NONE"
 
 " kylechui/nvim-surround
-hi! link NvimSurroundHighlightTextObject IncSearch
+hi! link NvimSurroundHighlight IncSearch
 
 " nvim-treesitter
 hi clear TSNone
