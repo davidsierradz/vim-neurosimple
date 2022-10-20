@@ -182,91 +182,98 @@ exec "hi! WhichKeyValue       guifg=" . s:gui07 . " guibg=" . "NONE" . " gui=NON
 hi! link NvimSurroundHighlight IncSearch
 
 " nvim-treesitter
-hi clear TSNone
-hi! link TSPunctDelimiter Delimiter
-hi! link TSPunctBracket Delimiter
-hi! link TSPunctSpecial Delimiter
+hi clear @none
+hi! link @punctuation.delimiter Delimiter
+hi! link @punctuation.bracket Delimiter
+hi! link @punctuation.special Delimiter
+hi! link @punctuation.special.markdown String
 
-hi! link TSConstant Constant
-hi! link TSConstBuiltin Special
-hi! link TSConstMacro Define
-hi! link TSString String
-hi! link TSStringRegex String
-hi! link TSStringEscape String
-hi! link TSStringSpecial String
-hi! link TSCharacter Character
-hi! link TSCharacterSpecial String
-hi! link TSNumber Number
-hi! link TSBoolean Boolean
-hi! link TSFloat Float
+hi! link @constant Constant
+hi! link @constant.builtin Special
+hi! link @constant.macro Define
+hi! link @string. String
+hi! link @string.regex String
+hi! link @string.escape String
+hi! link @string.special String
+hi! link @character Character
+hi! link @character.special String
+hi! link @boolean Boolean
+hi! link @number Number
+hi! link @float Float
 
-hi! link TSFunction Function
-hi! link TSFunctionCall TSFunction
-hi! link TSFuncBuiltin Special
-hi! link TSFuncMacro Macro
-hi! link TSParameter Identifier
-hi! link TSParameterReference TSParameter
-hi! link TSMethod Function
-hi! link TSMethodCall TSMethod
-hi! link TSField Identifier
-hi! link TSProperty Identifier
-hi! link TSConstructor Special
-hi! link TSAnnotation PreProc
-hi! link TSAttribute PreProc
-hi! link TSNamespace Include
-hi! link TSSymbol Identifier
+hi! link @function Function
+hi! link @function.builtin Special
+hi! link @function.call @function
+hi! link @function.macro Macro
+hi! link @parameter Identifier
+hi! link @parameter.reference @parameter
+hi! link @method Function
+hi! link @method.call @method
+hi! link @field Identifier
+hi! link @property Identifier
+hi! link @constructor Special
+hi! link @annotation PreProc
+hi! link @attribute PreProc
+hi! link @namespace Include
+hi! link @symbol Identifier
 
-hi! link TSConditional Conditional
-hi! link TSRepeat Repeat
-hi! link TSLabel Label
-hi! link TSOperator Operator
-hi! link TSKeyword Keyword
-hi! link TSKeywordFunction Keyword
-hi! link TSKeywordOperator TSOperator
-hi! link TSKeywordReturn TSKeyword
-hi! link TSException Exception
-hi! link TSDebug Debug
-hi! link TSDefine Define
-hi! link TSPreProc PreProc
-hi! link TSStorageClass StorageClass
+hi! link @conditional Conditional
+hi! link @repeat Repeat
+hi! link @label Label
+hi! link @operator Operator
+hi! link @keyword Keyword
+hi! link @keyword.function Keyword
+hi! link @keyword.operator @operator
+hi! link @keyword.return @keyword
+hi! link @exception Exception
+hi! link @debug Debug
+hi! link @define Define
+hi! link @pre.proc PreProc
+hi! link @storage.class StorageClass
 
-hi! link TSTodo Todo
+hi! link @todo Todo
 
-hi! link TSType Type
-hi! link TSTypeBuiltin Type
-hi! link TSTypeQualifier Type
-hi! link TSTypeDefinition Typedef
+hi! link @type Type
+hi! link @type.builtin Type
+hi! link @type.qualifier Type
+hi! link @type.definition Typedef
 
-hi! link TSInclude Include
+hi! link @include Include
 
-hi! link TSVariable Identifier
-hi! link TSVariableBuiltin Special
+hi! link @variable Identifier
+hi! link @variable.builtin Special
 
-hi! link TSText TSNone
-exec "hi! TSStrong        guifg=" . s:gui07 . " guibg=NONE            gui=bold          ctermfg=" . s:cterm07 . " ctermbg=NONE cterm=bold"
+exec "hi! @strong        guifg=" . s:gui07 . " guibg=NONE            gui=bold          ctermfg=" . s:cterm07 . " ctermbg=NONE cterm=bold"
 exec "hi! Comment         guifg=" . s:gui08 . " guibg=NONE            gui=italic        ctermfg=" . s:cterm08 . " ctermbg=NONE cterm=italic"
-exec "hi! TSEmphasis      guifg=" . s:gui08 . " guibg=NONE            gui=italic        ctermfg=" . s:cterm08 . " ctermbg=NONE cterm=italic"
-exec "hi! TSUnderline     guifg=" . s:gui07 . " guibg=NONE            gui=underline     ctermfg=" . s:cterm07 . " ctermbg=NONE cterm=underline"
-exec "hi! TSStrike        guifg=" . s:gui07 . " guibg=NONE            gui=strikethrough ctermfg=" . s:cterm07 . " ctermbg=NONE cterm=strikethrough"
+exec "hi! @emphasis      guifg=" . s:gui07 . " guibg=NONE            gui=italic        ctermfg=" . s:cterm07 . " ctermbg=NONE cterm=italic"
+exec "hi! @underline     guifg=" . s:gui07 . " guibg=NONE            gui=underline     ctermfg=" . s:cterm07 . " ctermbg=NONE cterm=underline"
+exec "hi! @strike        guifg=" . s:gui07 . " guibg=NONE            gui=strikethrough ctermfg=" . s:cterm07 . " ctermbg=NONE cterm=strikethrough"
 
-hi! link TSMath Special
-hi! link TSTextReference Constant
-hi! link TSEnvironment Macro
-hi! link TSEnvironmentName Type
-hi! link TSTitle Title
-hi! link TSLiteral String
-hi! link TSURI Underlined
+hi! link @math Special
+hi! link @text @none
+hi! link @text.reference Number
+hi! link @text.title String
+hi! link @text.uri Underlined
+hi! link @text.strong @strong
+hi! link @text.emphasis @emphasis
+hi! link @text.literal Boolean
+hi! link @text.warning Todo
+hi! link @text.strike @strike
+hi! link @environment Macro
+hi! link @environment.name Type
+hi! link @title Title
+hi! link @literal String
 
-hi! link TSComment Comment
-hi! link TSNote SpecialComment
-hi! link TSWarning Todo
-hi! link TSDanger WarningMsg
+hi! link @comment Comment
+hi! link @note SpecialComment
+hi! link @warning Todo
+hi! link @danger WarningMsg
 
-hi! link TSTag Label
-hi! link TSTagDelimiter Delimiter
-hi! link TSTagAttribute TSProperty
+hi! link @tag Label
+hi! link @tag.delimiter Delimiter
+hi! link @tag.attribute @property
 
-hi! link TSError DiagnosticError
+hi! link @error DiagnosticError
 
 " For some reason, this needs to be here for CmpItemKindDefault to
 " correctly link to Normal:
@@ -328,304 +335,183 @@ exec "hi! Special          guifg=" . s:gui07 . " guibg=NONE  gui=NONE ctermfg=" 
 " highlighting.  You can override these defaults by using ":highlight" commands
 " after sourcing the "syntax.vim" file.
 
-" HIGHLIGHTS                                        *nvim-treesitter-highlights*
-"
-" The following is a list of highlights groups, the syntactic elements they
-" apply to, and some examples.
-"
-" 							      *hl-TSAttribute*
-" `TSAttribute`
-" Annotations that can be attached to the code to denote some kind of meta
-" information. e.g. C++/Dart attributes.
-"
-" 								*hl-TSBoolean*
-" `TSBoolean`
-" Boolean literals: `True` and `False` in Python.
-"
-" 							      *hl-TSCharacter*
-" `TSCharacter`
-" Character literals: `'a'` in C.
-"
-" 						       *hl-TSCharacterSpecial*
-" `TSCharacterSpecial`
-" Special characters.
-"
-" 								*hl-TSComment*
-" `TSComment`
-" Line comments and block comments.
-"
-" 							    *hl-TSConditional*
-" `TSConditional`
-" Keywords related to conditionals: `if`, `when`, `cond`, etc.
-"
-" 							       *hl-TSConstant*
-" `TSConstant`
-" Constants identifiers. These might not be semantically constant.
-" E.g. uppercase variables in Python.
-"
-" 							   *hl-TSConstBuiltin*
-" `TSConstBuiltin`
-" Built-in constant values: `nil` in Lua.
-"
-" 							     *hl-TSConstMacro*
-" `TSConstMacro`
-" Constants defined by macros: `NULL` in C.
-"
-" 							    *hl-TSConstructor*
-" `TSConstructor`
-" Constructor calls and definitions: `{}` in Lua, and Java constructors.
-"
-" 								  *hl-TSDebug*
-" `TSDebug`
-" Debugging statements.
-"
-" 								 *hl-TSDefine*
-" `TSDefine`
-" Preprocessor #define statements.
-"
-" 								  *hl-TSError*
-" `TSError`
-" Syntax/parser errors. This might highlight large sections of code while the
-" user is typing still incomplete code, use a sensible highlight.
-"
-" 							      *hl-TSException*
-" `TSException`
-" Exception related keywords: `try`, `except`, `finally` in Python.
-"
-" 								  *hl-TSField*
-" `TSField`
-" Object and struct fields.
-"
-" 								  *hl-TSFloat*
-" `TSFloat`
-" Floating-point number literals.
-"
-" 							       *hl-TSFunction*
-" `TSFunction`
-" Function definitions.
-"
-" 							   *hl-TSFunctionCall*
-" `TSFunctionCall`
-" Function calls.
-"
-" 							    *hl-TSFuncBuiltin*
-" `TSFuncBuiltin`
-" Built-in functions: `print` in Lua.
-"
-" 							      *hl-TSFuncMacro*
-" `TSFuncMacro`
-" Macro defined functions (calls and definitions): each `macro_rules` in
-" Rust.
-"
-" 								*hl-TSInclude*
-" `TSInclude`
-" File or module inclusion keywords: `#include` in C, `use` or `extern crate` in
-" Rust.
-"
-" 								*hl-TSKeyword*
-" `TSKeyword`
-" Keywords that don't fit into other categories.
-"
-" 							*hl-TSKeywordFunction*
-" `TSKeywordFunction`
-" Keywords used to define a function: `function` in Lua, `def` and `lambda` in
-" Python.
-"
-" 							*hl-TSKeywordOperator*
-" `TSKeywordOperator`
-" Unary and binary operators that are English words: `and`, `or` in Python;
-" `sizeof` in C.
-"
-" 							  *hl-TSKeywordReturn*
-" `TSKeywordReturn`
-" Keywords like `return` and `yield`.
-"
-" 								  *hl-TSLabel*
-" `TSLabel`
-" GOTO labels: `label:` in C, and `::label::` in Lua.
-"
-" 								 *hl-TSMethod*
-" `TSMethod`
-" Method definitions.
-"
-" 							     *hl-TSMethodCall*
-" `TSMethodCall`
-" Method calls.
-"
-" 							      *hl-TSNamespace*
-" `TSNamespace`
-" Identifiers referring to modules and namespaces.
-"
-" 								     *hl-None*
-" `TSNone`
-" No highlighting (sets all highlight arguments to `NONE`). This group is used
-" to clear certain ranges, for example, string interpolations. Don't change the
-" values of this highlight group.
-"
-" 								 *hl-TSNumber*
-" `TSNumber`
-" Numeric literals that don't fit into other categories.
-"
-" 							       *hl-TSOperator*
-" `TSOperator`
-" Binary or unary operators: `+`, and also `->` and `*` in C.
-"
-" 							      *hl-TSParameter*
-" `TSParameter`
-" Parameters of a function.
-"
-" 						     *hl-TSParameterReference*
-" `TSParameterReference`
-" References to parameters of a function.
-"
-" 								*hl-TSPreProc*
-" `TSPreProc`
-" Preprocessor #if, #else, #endif, etc.
-"
-" 							       *hl-TSProperty*
-" `TSProperty`
-" Same as `TSField`.
-"
-" 							 *hl-TSPunctDelimiter*
-" `TSPunctDelimiter`
-" Punctuation delimiters: Periods, commas, semicolons, etc.
-"
-" 							   *hl-TSPunctBracket*
-" `TSPunctBracket`
-" Brackets, braces, parentheses, etc.
-"
-" 							   *hl-TSPunctSpecial*
-" `TSPunctSpecial`
-" Special punctuation that doesn't fit into the previous categories.
-"
-" 								 *hl-TSRepeat*
-" `TSRepeat`
-" Keywords related to loops: `for`, `while`, etc.
-"
-" 							     *hl-StorageClass*
-" `TSStorageClass`
-" Keywords that affect how a variable is stored: `static`, `comptime`, `extern`,
-" etc.
-"
-" 								 *hl-TSString*
-" `TSString`
-" String literals.
-"
-" 							    *hl-TSStringRegex*
-" `TSStringRegex`
-" Regular expression literals.
-"
-" 							   *hl-TSStringEscape*
-" `TSStringEscape`
-" Escape characters within a string: `\n`, `\t`, etc.
-"
-" 							  *hl-TSStringSpecial*
-" `TSStringSpecial`
-" Strings with special meaning that don't fit into the previous categories.
-"
-" 								 *hl-TSSymbol*
-" `TSSymbol`
-" Identifiers referring to symbols or atoms.
-"
-" 								    *hl-TSTag*
-" `TSTag`
-" Tags like HTML tag names.
-"
-" 							   *hl-TSTagAttribute*
-" `TSTagAttribute`
-" HTML tag attributes.
-"
-" 							   *hl-TSTagDelimiter*
-" `TSTagDelimiter`
-" Tag delimiters like `<` `>` `/`.
-"
-" 								   *hl-TSText*
-" `TSText`
-" Non-structured text. Like text in a markup language.
-"
-" 								 *hl-TSSTrong*
-" `TSStrong`
-" Text to be represented in bold.
-"
-" 							       *hl-TSEmphasis*
-" `TSEmphasis`
-" Text to be represented with emphasis.
-"
-" 							      *hl-TSUnderline*
-" `TSUnderline`
-" Text to be represented with an underline.
-"
-" 								 *hl-TSStrike*
-" `TSStrike`
-" Strikethrough text.
-"
-" 								  *hl-TSTitle*
-" `TSTitle`
-" Text that is part of a title.
-"
-" 								*hl-TSLiteral*
-" `TSLiteral`
-" Literal or verbatim text.
-"
-" 								    *hl-TSURI*
-" `TSURI`
-" URIs like hyperlinks or email addresses.
-"
-" 								   *hl-TSMath*
-" `TSMath`
-" Math environments like LaTeX's `$ ... $`.
-"
-" 							  *hl-TSTextReference*
-" `TSTextReference`
-" Footnotes, text references, citations, etc.
-"
-" 							     *hl-TSEnvironment*
-" `TSEnvironment`
-" Text environments of markup languages.
-"
-" 							 *hl-TSEnvironmentName*
-" `TSEnvironmentName`
-" Text/string indicating the type of text environment. Like the name of a
-" `\begin` block in LaTeX.
-"
-" 								   *hl-TSNote*
-" `TSNote`
-" Text representation of an informational note.
-"
-" 								   *TSWarning*
-" `TSWarning`
-" Text representation of a warning note.
-"
-" 								    *TSDanger*
-" `TSDanger`
-" Text representation of a danger note.
-"
-" 								   *hl-TSTodo*
-" `TSTodo`
-" Anything that needs extra attention, such as keywords like TODO or FIXME.
-"
-" 								   *hl-TSType*
-" `TSType`
-" Type (and class) definitions and annotations.
-"
-" 							    *hl-TSTypeBuiltin*
-" `TSTypeBuiltin`
-" Built-in types: `i32` in Rust.
-"
-" 							  *hl-TSTypeQualifier*
-" `TSTypeQualifier`
-" Qualifiers on types, e.g. `const` or `volatile` in C or `mut` in Rust.
-"
-" 							 *hl-TSTypeDefinition*
-" `TSTypeDefinition`
-" Type definitions, e.g. `typedef` in C.
-"
-" 							       *hl-TSVariable*
-" `TSVariable`
-" Variable names that don't fit into other categories.
-"
-" 							*hl-TSVariableBuiltin*
-" `TSVariableBuiltin`
-" Variable names defined by the language: `this` or `self` in Javascript.
+" ### Highlights
+"
+" As languages differ quite a lot, here is a set of captures available to you when building a `highlights.scm` query.
+" One important thing to note is that many of these capture groups are not supported by `neovim` for now, and will not have any
+" effect on highlighting. We will work on improving highlighting in the near future though.
+"
+" #### Misc
+"
+" ```scheme
+" @comment  ; line and block comments
+" @error    ; syntax/parser errors
+" @none     ; completely disable the highlight
+" @preproc  ; various preprocessor directives & shebangs
+" @define   ; preprocessor definition directives
+" @operator ; symbolic operators (e.g. `+` / `*`)
+" ```
+"
+" #### Punctuation
+"
+" ```scheme
+" @punctuation.delimiter ; delimiters (e.g. `;` / `.` / `,`)
+" @punctuation.bracket   ; brackets (e.g. `()` / `{}` / `[]`)
+" @punctuation.special   ; special symbols (e.g. `{}` in string interpolation)
+" ```
+"
+" #### Literals
+"
+" ```scheme
+" @string            ; string literals
+" @string.regex      ; regular expressions
+" @string.escape     ; escape sequences
+" @string.special    ; other special strings (e.g. dates)
+"
+" @character         ; character literals
+" @character.special ; special characters (e.g. wildcards)
+"
+" @boolean           ; boolean literals
+" @number            ; numeric literals
+" @float             ; floating-point number literals
+" ```
+"
+" #### Functions
+"
+" ```scheme
+" @function         ; function definitions
+" @function.builtin ; built-in functions
+" @function.call    ; function calls
+" @function.macro   ; preprocessor macros
+"
+" @method           ; method definitions
+" @method.call      ; method calls
+"
+" @constructor      ; constructor calls and definitions
+" @parameter        ; parameters of a function
+" ```
+"
+" #### Keywords
+"
+" ```scheme
+" @keyword          ; various keywords
+" @keyword.function ; keywords that define a function (e.g. `func` in Go, `def` in Python)
+" @keyword.operator ; operators that are English words (e.g. `and` / `or`)
+" @keyword.return   ; keywords like `return` and `yield`
+"
+" @conditional      ; keywords related to conditionals (e.g. `if` / `else`)
+" @repeat           ; keywords related to loops (e.g. `for` / `while`)
+" @debug            ; keywords related to debugging
+" @label            ; GOTO and other labels (e.g. `label:` in C)
+" @include          ; keywords for including modules (e.g. `import` / `from` in Python)
+" @exception        ; keywords related to exceptions (e.g. `throw` / `catch`)
+" ```
+"
+" #### Types
+"
+" ```scheme
+" @type            ; type or class definitions and annotations
+" @type.builtin    ; built-in types
+" @type.definition ; type definitions (e.g. `typedef` in C)
+" @type.qualifier  ; type qualifiers (e.g. `const`)
+"
+" @storageclass    ; visibility/life-time/etc. modifiers (e.g. `static`)
+" @attribute       ; attribute annotations (e.g. Python decorators)
+" @field           ; object and struct fields
+" @property        ; similar to `@field`
+" ```
+"
+" #### Identifiers
+"
+" ```scheme
+" @variable         ; various variable names
+" @variable.builtin ; built-in variable names (e.g. `this`)
+"
+" @constant          ; constant identifiers
+" @constant.builtin  ; built-in constant values
+" @constant.macro    ; constants defined by the preprocessor
+"
+" @namespace        ; modules or namespaces
+" @symbol           ; symbols or atoms
+" ```
+"
+" #### Text
+"
+" Mainly for markup languages.
+"
+" ```scheme
+" @text                  ; non-structured text
+" @text.strong           ; bold text
+" @text.emphasis         ; text with emphasis
+" @text.underline        ; underlined text
+" @text.strike           ; strikethrough text
+" @text.title            ; text that is part of a title
+" @text.literal          ; literal or verbatim text
+" @text.uri              ; URIs (e.g. hyperlinks)
+" @text.math             ; math environments (e.g. `$ ... $` in LaTeX)
+" @text.environment      ; text environments of markup languages
+" @text.environment.name ; text indicating the type of an environment
+" @text.reference        ; text references, footnotes, citations, etc.
+"
+" @text.todo             ; todo notes
+" @text.note             ; info notes
+" @text.warning          ; warning notes
+" @text.danger           ; danger/error notes
+" ```
+"
+" #### Tags
+"
+" Used for XML-like tags.
+"
+" ```scheme
+" @tag           ; XML tag names
+" @tag.attribute ; XML tag attributes
+" @tag.delimiter ; XML tag delimiters
+" ```
+"
+" #### Conceal
+"
+"
+" ```scheme
+" @conceal ; for captures that are only used for concealing
+" ```
+"
+" `@conceal` must be followed by `(#set! conceal "")`.
+"
+" #### Spell
+"
+" ```scheme
+" @spell ; for defining regions to be spellchecked
+" ```
+"
+" #### Non-standard
+"
+" These captures are used by some languages but don't have any default highlights.
+" They fall back to the parent capture if they are not manually defined.
+"
+" ```scheme
+" @variable.global
+" ```
+"
+" ### Locals
+"
+" ```scheme
+" @definition            ; various definitions
+" @definition.constant   ; constants
+" @definition.function   ; functions
+" @definition.method     ; methods
+" @definition.var        ; variables
+" @definition.parameter  ; parameters
+" @definition.macro      ; preprocessor macros
+" @definition.type       ; types or classes
+" @definition.field      ; fields or properties
+" @definition.enum       ; enumerations
+" @definition.namespace  ; modules or namespaces
+" @definition.import     ; imported names
+" @definition.associated ; the associated type of a variable
+"
+" @scope                 ; scope block
+" @reference             ; identifier reference
+" ```
 
 " }}}}
