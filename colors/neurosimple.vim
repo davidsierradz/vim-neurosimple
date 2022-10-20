@@ -186,7 +186,7 @@ hi clear @none
 hi! link @punctuation.delimiter Delimiter
 hi! link @punctuation.bracket Delimiter
 hi! link @punctuation.special Delimiter
-hi! link @punctuation.special.markdown String
+hi! link @punctuation.special.markdown @strong
 
 hi! link @constant Constant
 hi! link @constant.builtin Special
@@ -252,11 +252,11 @@ exec "hi! @strike        guifg=" . s:gui07 . " guibg=NONE            gui=striket
 hi! link @math Special
 hi! link @text @none
 hi! link @text.reference Number
-hi! link @text.title String
+hi! link @text.title @strong
 hi! link @text.uri Underlined
 hi! link @text.strong @strong
 hi! link @text.emphasis @emphasis
-hi! link @text.literal Boolean
+hi! link @text.literal String
 hi! link @text.warning Todo
 hi! link @text.strike @strike
 hi! link @environment Macro
