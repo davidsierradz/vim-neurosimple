@@ -131,7 +131,7 @@ exec "hi! Boolean          guifg=" . s:gui03 . " guibg=NONE            gui=NONE 
 exec "hi! Number           guifg=" . s:gui05 . " guibg=NONE            gui=NONE               ctermfg=" . s:cterm05 . "  ctermbg=NONE                 cterm=NONE"
 exec "hi! Underlined       guifg=" . s:gui07 . " guibg=NONE            gui=underline          ctermfg=" . s:cterm07 . "  ctermbg=NONE                 cterm=underline"
 exec "hi! Error            guifg=" . s:gui00 . " guibg=" . s:gui01 . " gui=bold               ctermfg=" . s:cterm00 . "  ctermbg=" . s:cterm01 . "    cterm=bold"
-exec "hi! Todo             guifg=" . s:gui07 . " guibg=NONE            gui=bold,underline     ctermfg=" . s:cterm07 . "  ctermbg=NONE                 cterm=bold,underline"
+exec "hi! Todo             guifg=" . s:gui07 . " guibg=NONE            gui=bold               ctermfg=" . s:cterm07 . "  ctermbg=NONE                 cterm=bold"
 
 hi! link VertSplit Normal
 hi! link LineNr Normal
@@ -184,11 +184,13 @@ hi! link NvimSurroundHighlight IncSearch
 " nvim-treesitter
 hi clear @none
 hi! link @punctuation.delimiter Delimiter
+hi! link @punctuation.delimiter.comment Todo
 hi! link @punctuation.bracket Delimiter
 hi! link @punctuation.special Delimiter
 hi! link @punctuation.special.markdown @strong
 
 hi! link @constant Constant
+hi! link @constant.comment Comment
 hi! link @constant.builtin Special
 hi! link @constant.macro Define
 hi! link @string. String
@@ -258,6 +260,7 @@ hi! link @text.strong @strong
 hi! link @text.emphasis @emphasis
 hi! link @text.literal String
 hi! link @text.warning Todo
+hi! link @text.danger Todo
 hi! link @text.strike @strike
 hi! link @environment Macro
 hi! link @environment.name Type
