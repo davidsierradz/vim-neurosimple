@@ -191,6 +191,7 @@ hi! link @punctuation.special.markdown @strong
 
 hi! link @constant Constant
 hi! link @constant.comment Comment
+hi! link @number.comment Comment
 hi! link @constant.builtin Special
 hi! link @constant.macro Define
 hi! link @string. String
