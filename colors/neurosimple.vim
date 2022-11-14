@@ -111,7 +111,7 @@ exec "hi! SpellBad         guifg=" . s:gui07 . " guibg=NONE            gui=under
 exec "hi! SpellCap         guifg=" . s:gui07 . " guibg=NONE            gui=undercurl     ctermfg=" . s:cterm07 . " ctermbg=NONE              cterm=undercurl"
 exec "hi! SpellLocal       guifg=" . s:gui07 . " guibg=NONE            gui=undercurl     ctermfg=" . s:cterm07 . " ctermbg=NONE              cterm=undercurl"
 exec "hi! SpellRare        guifg=" . s:gui07 . " guibg=NONE            gui=undercurl     ctermfg=" . s:cterm07 . " ctermbg=NONE              cterm=undercurl"
-exec "hi! StatusLine       guifg=" . s:gui00 . " guibg=" . s:gui07 . " gui=NONE          ctermfg=" . s:cterm00 . " ctermbg=" . s:cterm07 . " cterm=NONE"
+exec "hi! StatusLine       guifg=" . s:gui07 . " guibg=" . s:gui00 . " gui=NONE          ctermfg=" . s:cterm00 . " ctermbg=" . s:cterm07 . " cterm=NONE"
 exec "hi! StatusLineNC     guifg=" . s:gui08 . " guibg=" . s:gui07 . " gui=NONE          ctermfg=" . s:cterm08 . " ctermbg=" . s:cterm07 . " cterm=NONE"
 exec "hi! TabLine          guifg=" . s:gui00 . " guibg=" . s:gui07 . " gui=NONE          ctermfg=" . s:cterm00 . " ctermbg=" . s:cterm07 . " cterm=NONE"
 exec "hi! TabLineFill      guifg=" . s:gui00 . " guibg=" . s:gui07 . " gui=NONE          ctermfg=" . s:cterm00 . " ctermbg=" . s:cterm07 . " cterm=NONE"
