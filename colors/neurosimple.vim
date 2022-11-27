@@ -263,6 +263,13 @@ hi! link @text.literal String
 hi! link @text.warning Todo
 hi! link @text.danger Todo
 hi! link @text.strike @strike
+
+hi! link @text.diff.add DiffAdd
+hi! link @text.diff.delete DiffDelete
+hi! link @function.diff @strong
+hi! link @attribute.diff @strong
+hi! link @constant.diff @strong
+
 hi! link @environment Macro
 hi! link @environment.name Type
 hi! link @title Title
