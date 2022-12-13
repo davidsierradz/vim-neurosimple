@@ -19,10 +19,10 @@ if &background ==# 'light'
   let s:gui00        = "#ffffff"
   let s:gui07        = "#6272a4"
   let s:gui08        = "#f8f8f2"
-  let s:gui15        = "#282a36"
-  let s:gui15        = "#f8f8f2"
+  let s:gui15        = "#21222c"
+  let s:gui16        = "#f8f8f2"
 else
-  let s:gui00        = "#282a36"
+  let s:gui00        = "#21222c"
   let s:gui07        = "#f8f8f2"
   let s:gui08        = "#6272a4"
   let s:gui15        = "#ffffff"
@@ -111,7 +111,7 @@ exec "hi! SpellBad         guifg=" . s:gui07 . " guibg=NONE            gui=under
 exec "hi! SpellCap         guifg=" . s:gui07 . " guibg=NONE            gui=undercurl     ctermfg=" . s:cterm07 . " ctermbg=NONE              cterm=undercurl"
 exec "hi! SpellLocal       guifg=" . s:gui07 . " guibg=NONE            gui=undercurl     ctermfg=" . s:cterm07 . " ctermbg=NONE              cterm=undercurl"
 exec "hi! SpellRare        guifg=" . s:gui07 . " guibg=NONE            gui=undercurl     ctermfg=" . s:cterm07 . " ctermbg=NONE              cterm=undercurl"
-exec "hi! StatusLine       guifg=" . s:gui07 . " guibg=" . s:gui00 . " gui=NONE          ctermfg=" . s:cterm00 . " ctermbg=" . s:cterm07 . " cterm=NONE"
+exec "hi! StatusLine       guifg=" . s:gui07 . " guibg=NONE            gui=NONE          ctermfg=" . s:cterm00 . " ctermbg=NONE              cterm=NONE"
 exec "hi! StatusLineNC     guifg=" . s:gui08 . " guibg=" . s:gui07 . " gui=NONE          ctermfg=" . s:cterm08 . " ctermbg=" . s:cterm07 . " cterm=NONE"
 exec "hi! TabLine          guifg=" . s:gui00 . " guibg=" . s:gui07 . " gui=NONE          ctermfg=" . s:cterm00 . " ctermbg=" . s:cterm07 . " cterm=NONE"
 exec "hi! TabLineFill      guifg=" . s:gui00 . " guibg=" . s:gui07 . " gui=NONE          ctermfg=" . s:cterm00 . " ctermbg=" . s:cterm07 . " cterm=NONE"
@@ -247,7 +247,7 @@ hi! link @variable Identifier
 hi! link @variable.builtin Special
 
 exec "hi! @strong        guifg=" . s:gui07 . " guibg=NONE            gui=bold          ctermfg=" . s:cterm07 . " ctermbg=NONE cterm=bold"
-exec "hi! Comment         guifg=" . s:gui08 . " guibg=NONE            gui=italic        ctermfg=" . s:cterm08 . " ctermbg=NONE cterm=italic"
+exec "hi! Comment        guifg=" . s:gui08 . " guibg=NONE            gui=italic        ctermfg=" . s:cterm08 . " ctermbg=NONE cterm=italic"
 exec "hi! @emphasis      guifg=" . s:gui07 . " guibg=NONE            gui=italic        ctermfg=" . s:cterm07 . " ctermbg=NONE cterm=italic"
 exec "hi! @underline     guifg=" . s:gui07 . " guibg=NONE            gui=underline     ctermfg=" . s:cterm07 . " ctermbg=NONE cterm=underline"
 exec "hi! @strike        guifg=" . s:gui07 . " guibg=NONE            gui=strikethrough ctermfg=" . s:cterm07 . " ctermbg=NONE cterm=strikethrough"
