@@ -16,17 +16,15 @@ let s:gui12        = "#d6acff"
 let s:gui13        = "#ff92df"
 let s:gui14        = "#a4ffff"
 if &background ==# 'light'
-  let s:gui00        = "#ffffff"
-  let s:gui07        = "#6272a4"
-  let s:gui08        = "#f8f8f2"
-  let s:gui15        = "#21222c"
-  let s:gui16        = "#f8f8f2"
+  let s:gui00        = "#f8f8f2"
+  let s:gui07        = "#21222c"
+  let s:gui08        = "#6272a4"
+  let s:gui15        = "#282a36"
 else
   let s:gui00        = "#21222c"
   let s:gui07        = "#f8f8f2"
   let s:gui08        = "#6272a4"
   let s:gui15        = "#ffffff"
-  let s:gui16        = "#21222c"
 endif
 
 " Terminal color definitions
@@ -100,7 +98,7 @@ exec "hi! Substitute       guifg=" . s:gui00 . " guibg=" . s:gui03 . " gui=bold 
 exec "hi! MatchParen       guifg=" . s:gui07 . " guibg=NONE            gui=bold          ctermfg=" . s:cterm07 . " ctermbg=NONE              cterm=bold"
 exec "hi! MoreMsg          guifg=" . s:gui07 . " guibg=NONE            gui=bold          ctermfg=" . s:cterm07 . " ctermbg=NONE              cterm=bold"
 exec "hi! NonText          guifg=" . s:gui08 . " guibg=NONE            gui=NONE          ctermfg=" . s:cterm08 . " ctermbg=NONE              cterm=NONE"
-exec "hi! Pmenu            guifg=" . s:gui07 . " guibg=" . s:gui16 . " gui=NONE          ctermfg=" . s:cterm00 . " ctermbg=" . s:cterm08 . " cterm=NONE"
+exec "hi! Pmenu            guifg=" . s:gui07 . " guibg=" . s:gui00 . " gui=NONE          ctermfg=" . s:cterm00 . " ctermbg=" . s:cterm08 . " cterm=NONE"
 exec "hi! PmenuSel         guifg=" . s:gui15 . " guibg=" . s:gui08 . " gui=bold          ctermfg=" . s:cterm15 . " ctermbg=" . s:cterm00 . " cterm=bold"
 exec "hi! PmenuSbar        guifg=NONE            guibg=" . s:gui00 . " gui=NONE          ctermfg=NONE              ctermbg=" . s:cterm00 . " cterm=NONE"
 exec "hi! PmenuThumb       guifg=NONE            guibg=" . s:gui07 . " gui=NONE          ctermfg=NONE              ctermbg=" . s:cterm07 . " cterm=NONE"
@@ -125,7 +123,6 @@ hi! link SpecialComment Comment
 
 " :help group-name
 
-exec "hi! Comment          guifg=" . s:gui08 . " guibg=NONE            gui=italic             ctermfg=" . s:cterm08 . "  ctermbg=NONE                 cterm=italic"
 exec "hi! String           guifg=" . s:gui02 . " guibg=NONE            gui=NONE               ctermfg=" . s:cterm02 . "  ctermbg=NONE                 cterm=NONE"
 exec "hi! Boolean          guifg=" . s:gui03 . " guibg=NONE            gui=NONE               ctermfg=" . s:cterm03 . "  ctermbg=NONE                 cterm=NONE"
 exec "hi! Number           guifg=" . s:gui05 . " guibg=NONE            gui=NONE               ctermfg=" . s:cterm05 . "  ctermbg=NONE                 cterm=NONE"
