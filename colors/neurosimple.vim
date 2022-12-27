@@ -178,6 +178,9 @@ exec "hi! WhichKeyValue       guifg=" . s:gui07 . " guibg=" . "NONE" . " gui=NON
 " kylechui/nvim-surround
 hi! link NvimSurroundHighlight IncSearch
 
+" nvim-tree/nvim-tree.lua
+hi! link NvimTreeCursorLine @none
+
 " nvim-treesitter
 hi clear @none
 hi! link @punctuation.delimiter Delimiter
