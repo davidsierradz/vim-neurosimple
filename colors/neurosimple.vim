@@ -181,6 +181,10 @@ hi! link NvimSurroundHighlight IncSearch
 " nvim-tree/nvim-tree.lua
 hi! link NvimTreeCursorLine @none
 
+" vim-dadbod-ui
+hi! link NotificationInfo NormalFloat
+hi! link NotificationWarning NormalFloat
+
 " nvim-treesitter
 hi clear @none
 hi! link @punctuation.delimiter Delimiter
